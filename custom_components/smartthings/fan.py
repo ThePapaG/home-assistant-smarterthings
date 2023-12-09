@@ -160,24 +160,3 @@ class SmartThingsFan(SmartThingsEntity, FanEntity):
             return self._device.status.supported_ac_fan_modes
 
         return None
-
-
-    @property
-    def is_on(self) -> bool:
-        """Return true if fan is on."""
-        return self._device.status.switch
-
-    @property
-    def percentage(self) -> int:
-        """Return the current speed percentage."""
-        return ranged_value_to_percentage(SPEED_RANGE, self._device.status.fan_speed)
-
-    @property
-    def speed_count(self) -> int:
-        """Return the number of speeds the fan supports."""
-        return int_states_in_range(SPEED_RANGE)
-
-    @property
-    def supported_features(self) -> int:
-        """Flag supported features."""
-        return self._attr_supported_features

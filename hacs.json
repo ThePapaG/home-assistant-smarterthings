@@ -1,6 +1,6 @@
 {
-  "name": "SmartThings Custom",
-  "domains": ["binary_sensor","climate", "cover", "fan", "light", "lock", "select", "sensor", "switch", "number", "button"],
+  "name": "SmarterThings",
+  "domains": ["binary_sensor","climate", "cover", "fan", "light", "lock", "select", "sensor", "switch", "number", "button", "air_quality"],
   "homeassistant": "2021.12.7",
   "render_readme": true,
   "content_in_root": false,

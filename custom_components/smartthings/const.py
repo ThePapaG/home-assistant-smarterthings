@@ -2,15 +2,9 @@
 from datetime import timedelta
 import re
 
-from homeassistant.const import (
-    ELECTRIC_POTENTIAL_VOLT,
-    PERCENTAGE,
-    POWER_WATT,
-    TEMP_CELSIUS,
-    TEMP_FAHRENHEIT,
-)
+from homeassistant.const import Platform
 
-DOMAIN = "smartthings"
+DOMAIN = "smarterthings"
 
 APP_OAUTH_CLIENT_NAME = "Home Assistant"
 APP_OAUTH_SCOPES = ["r:devices:*"]
@@ -40,35 +34,23 @@ STORAGE_VERSION = 1
 # Ordered 'specific to least-specific platform' in order for capabilities
 # to be drawn-down and represented by the most appropriate platform.
 PLATFORMS = [
-    "climate",
-    "fan",
-    "light",
-    "lock",
-    "cover",
-    "number",
-    "select",
-    "button",
-    "switch",
-    "binary_sensor",
-    "air_quality",
-    "sensor",
-    "scene",
+    Platform.CLIMATE,
+    Platform.FAN,
+    Platform.LIGHT,
+    Platform.LOCK,
+    Platform.COVER,
+    Platform.SWITCH,
+    Platform.BINARY_SENSOR,
+    Platform.AIR_QUALITY,
+    Platform.SENSOR,
+    Platform.SCENE,
 ]
 
 IGNORED_CAPABILITIES = [
+    "execute",
     "healthCheck",
     "ocf",
 ]
-
-UNIT_MAP = {
-    "C": TEMP_CELSIUS,
-    "F": TEMP_FAHRENHEIT,
-    "Hour": "Hour",
-    "minute": "Minute",
-    "%": PERCENTAGE,
-    "W": POWER_WATT,
-    "V": ELECTRIC_POTENTIAL_VOLT,
-}
 
 TOKEN_REFRESH_INTERVAL = timedelta(days=14)
 
