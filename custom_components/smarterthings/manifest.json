@@ -1,6 +1,6 @@
 {
-  "domain": "smartthings",
-  "name": "SmartThings",
+  "domain": "smarterthings",
+  "name": "SmarterThings",
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/smartthings",
   "issue_tracker": "https://github.com/ThePapaG/home-assistant-smarterthings/issues",
