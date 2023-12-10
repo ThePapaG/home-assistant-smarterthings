@@ -41,22 +41,24 @@ async def async_setup_entry(
 
 def get_capabilities(capabilities: Sequence[str]) -> Sequence[str] | None:
     """Return all capabilities supported if minimum required are present."""
-    # Must have switch
-    supported = [Capability.switch]
 
-    # These are all optional
+    # These are all optional but at least one must be supported
     optional = [
         Capability.air_conditioner_fan_mode,
         Capability.fan_speed,
     ]
 
-    for capability in capabilities:
-        if capability in optional:
+    # Must have switch
+    if Capability.switch not in capabilities or not any(capability in capabilities for capability in optional):
+        return None
+
+    supported = [Capability.switch]
+
+    for capability in optional:
+        if (capability in capabilities):
             supported.append(capability)
 
-    if all(capability in capabilities for capability in supported):
-        return supported
-    return None
+    return supported
 
 
 class SmartThingsFan(SmartThingsEntity, FanEntity):
