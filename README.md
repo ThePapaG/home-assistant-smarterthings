@@ -14,14 +14,14 @@ https://github.com/veista/smartthings
 - Add `https://github.com/thepapag/home-assistant-smarterthings` as a Custom Repository
 - Install `SmarterThings` from the HACS Integrations tab
 - Restart Home Assistant
-- Install `SmartThings` from the HA Integrations tab
+- Install `SmarterThings` from the HA Integrations tab
 - Enjoy!
 
 ### Manually
-- Remove your original smartthings integration if you have one set up (optional)
-- Copy the smartthings folder to custom_components\
+- Remove your original smarterthings integration if you have one set up (optional)
+- Copy the smarterthings folder to custom_components\
 - Restart Home Assistant
-- Install `SmartThings` from the HA Integrations tab
+- Install `SmarterThings` from the HA Integrations tab
 - Enjoy!
 
 ## Notes:

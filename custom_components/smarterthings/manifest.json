@@ -2,7 +2,7 @@
   "domain": "smarterthings",
   "name": "SmarterThings",
   "codeowners": ["@andrewsayre", "@thepapag"],
-  "version": "0.0",
+  "version": "0.1",
 
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/smartthings",
