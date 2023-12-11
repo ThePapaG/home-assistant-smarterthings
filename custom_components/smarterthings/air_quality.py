@@ -43,6 +43,15 @@ def get_capabilities(capabilities: Sequence[str]) -> Sequence[str] | None:
 class SmartThingsAirQualitySensor(SmartThingsEntity, AirQualityEntity):
     """Define a SmartThings Air Quality Sensor."""
 
+    _attr_pm_2_5 = None
+    _attr_pm_10_0 = None
+    _attr_pm_1_0 = None 
+    _attr_iaq = None
+
+    async def async_update(self) -> None:
+        _attr
+
+
     @property
     def particulate_matter_2_5(self) -> StateType:
         """Return the particulate matter 2.5 level."""

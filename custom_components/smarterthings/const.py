@@ -41,7 +41,10 @@ PLATFORMS = [
     Platform.COVER,
     Platform.SWITCH,
     Platform.BINARY_SENSOR,
-    Platform.AIR_QUALITY,
+    # I thought this entity would be better but it turns out that the air quality entity is pretty
+    # poor. So i poted to revert back to using individual sensor entities. Air quality entity gives
+    # you nothing special anyway.
+    # Platform.AIR_QUALITY,
     Platform.SENSOR,
     Platform.SCENE,
 ]

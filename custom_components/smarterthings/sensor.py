@@ -192,6 +192,14 @@ CAPABILITY_TO_SENSORS: dict[str, list[Map]] = {
             SensorStateClass.MEASUREMENT,
             None,
         ),
+        Map(
+            "veryFineDustLevel",
+            "Very Fine Dust Level",
+            None,
+            None,
+            SensorStateClass.MEASUREMENT,
+            None,
+        ),
     ],
     Capability.energy_meter: [
         Map(
